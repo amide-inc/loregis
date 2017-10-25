@@ -10,7 +10,7 @@ if(!$user->isLoggedIn()) {
 
 if(Input::exists()) {
 	if(Token::check(Input::get('token'))) {
-		$validate = new validate();
+		$validate = new Validate();
 	  $validation = $validate->check($_POST, array(
           'current_password' => array(
               'required' => true,
