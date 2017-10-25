@@ -2,7 +2,7 @@
  require_once "core/Init.php";
  if(Input::exists()){
   if(Token::check(Input::get('token'))) {
-   $validate  = new validate();
+   $validate  = new Validate();
    $validation = $validate->check($_POST , array(
       'username' => array(
       	   'required' => true,
